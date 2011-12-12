@@ -1,0 +1,14 @@
+JetMallifyBundle:
+    resource: "@JetMallifyBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+JetJustBundle:
+    resource: "@JetJustBundle/Controller/"
+    type:     annotation
+    prefix:   /food
+
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal

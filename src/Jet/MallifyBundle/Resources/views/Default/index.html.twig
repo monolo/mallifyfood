@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mallify</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ asset('bundles/jetmallify/css/reset.css') }}" type="text/css" media="all">
+<link rel="stylesheet" href="{{ asset('bundles/jetmallify/css/layout.css') }}" type="text/css" media="all">
+<link rel="stylesheet" href="{{ asset('bundles/jetmallify/css/style.css') }}" type="text/css" media="all">
+<script type="text/javascript" src="{{ asset('bundles/jetmallify/js/jquery-1.4.2.js') }}" ></script>
+<script type="text/javascript" src="{{ asset('bundles/jetmallify/js/cufon-yui.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/jetmallify/js/cufon-replace.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/jetmallify/js/Myriad_Pro_400.font.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/jetmallify/js/Myriad_Pro_700.font.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/jetmallify/js/Myriad_Pro_600.font.js') }}"></script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
+	<script type="text/javascript" src="{{ asset('bundles/jetmallify/js/html5.js') }}"></script>
+<![endif]-->
+</head>
+<body id="page1">
+<div class="main">
+<!-- header -->
+	<header>
+		<div class="wrapper">
+			<h1><a href="index.html" id="logo">Mallify</a></h1>
+			<h2 id="slogan">BETA</h2>
+			<div style="clear:both"></div>
+		</div>
+		
+		<div class="wrapper">
+			<div class="text">
+				<span class="text1">Mallify<span>Food</span></span>
+				<span class="text2">Descubre nuevos restaurantes y comida para llevar desde tu smartphone.</span>
+				<a href="{{ path('home') }}" class="button">¡Pruébalo!</a>
+			</div>
+		</div>
+	</header>
+<!-- / header -->
+<!-- content -->
+	<section id="content">
+		<div class="wrapper">
+			<div class="wrapper">
+				<ul class="banners">
+					<li>
+						<a href="#"><img src="{{ asset('bundles/jetmallify/images/iphone.png') }}" alt="" height="50px"></a>
+						<div class="pad">
+							<p class="font1">Get Started</p>
+							<p>Obten Mallify en tu SmartPhone y empieza a descubrir nuevos lugares para comer.</p>
+							<a href="#" class="marker"></a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="{{ asset('bundles/jetmallify/images/cart.png') }}" alt="" height="50px"></a>
+						<div class="pad">
+							<p class="font1">Mira la Carta</p>
+							<p>Mira la carta de tu restaurante favorito diréctamente desde tu SmartPhone.</p>
+							<a href="#" class="marker"></a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="{{ asset('bundles/jetmallify/images/social.png') }}" alt="" height="50px"></a>
+						<div class="pad">
+							<p class="font1">Comparte</p>
+							<p>Envía tu opinión sobre un sitio y recomienda tus lugares favoritos.</p>
+							<a href="#" class="marker"></a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="{{ asset('bundles/jetmallify/images/offer.png') }}" alt="" height="30px" style="padding-bottom:20px;"></a>
+						<div class="pad">
+							<p class="font1">Promo's</p>
+							<p>Promociones exclusivas para nuestros usuarios.</p>
+							<a href="#" class="marker"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</section>
+<!-- / content -->
+<!-- footer -->
+	<footer>
+		<a href="#" target="_blank">Anunciantes</a> - 
+		<a href="#" target="_blank">TyC</a>
+	</footer>
+<!-- / footer -->
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

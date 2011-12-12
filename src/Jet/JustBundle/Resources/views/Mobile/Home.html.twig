@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+	<meta charset="utf-8">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<!--
+        <link rel="stylesheet" href="jquery.mobile-1.0.min.css" />
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.0.min.js"></script>
+    -->    
+        
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
+  </head>
+
+	
+<body> 
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>Mallify Food</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" id="home">	
+		<h2>Encuentra Restaurantes</h2>
+		
+		<p>Esta aplicación te permite encontrar restaurantes, y sitios de comida para llevar cercanos.</p>	
+<form action="{{ path('search') }}" method="GET">
+		<div data-role="fieldcontain">
+    <label for="name">Código Postal:</label>
+    <input type="text" name="code" id="code" value=""  />
+
+</div>	
+    				<div class="ui-block-b"><button type="submit" data-theme="a" data-role="button">Explorar</button></div>
+
+</form>
+
+	</div><!-- /content -->
+	
+	
+<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="grid" class="ui-btn-active">Explorar</a></li>
+				<li><a href="favs.html" data-role="button" data-icon="star">Favoritos</a></li>
+				<li><a href="#setup" data-icon="gear">Ajustes</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+	
+</div><!-- /page one -->
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="setup">
+
+	<div data-role="header">
+		<h1>Ajustes</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		<h2>Localización</h2>
+		<p>Cambie su ubicación:</p> 
+			
+		<p><a href="#home" data-rel="back" data-role="button" data-inline="true" data-icon="back">Aceptar</a></p>	
+	</div><!-- /content -->
+	
+<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="grid" data-direction="reverse" >Explorar</a></li>
+				<li><a href="favs.html" data-role="button" data-icon="star">Favoritos</a></li>
+				<li><a href="#setup" data-icon="gear" class="ui-btn-active">Ajustes</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+	
+</div><!-- /page popup -->
+
+</body>
+</html>

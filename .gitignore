@@ -1,0 +1,7 @@
+vendor/*
+app/logs/*
+nbproject/*
+app/cache/*
+app/cache/dev/*
+app/config/parameters.ini
+web/uploads/documents/*

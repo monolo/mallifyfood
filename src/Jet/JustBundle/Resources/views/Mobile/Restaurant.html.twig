@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+	<meta charset="utf-8">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<!--
+        <link rel="stylesheet" href="jquery.mobile-1.0.min.css" />
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.0.min.js"></script>
+    -->    
+        
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
+  </head>
+
+	
+<body> 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=213302158688098";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="info">
+
+	<div data-role="header">
+		<h1>{{ results.title }}</h1>
+		<a data-role="button" data-theme="a" data-direction="reverse" href="{{ path('home') }}" data-icon="back">Volver</a>
+		
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#info" class="ui-btn-active">Información</a></li>
+			<li><a href="#menu" data-transition="flip">Carta</a></li>
+			<li><a href="#opiniones" data-transition="flip">Opiniones</a></li>
+			<li><a href="#mapa" data-transition="flip">Mapa</a></li>
+			<li><a href="#">Favorito</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content" id="info">	
+		<img src="http://www.just-eat.es	{{ results.image }}">
+		
+		<div style="clear:both"></div>
+				
+<div class="fb-like" data-href="http://mallify.com/food/restaurant/{{ results.slug }}" data-send="true" data-width="500" data-show-faces="true"></div>
+
+
+		<h2>Ubicación</h2>
+		{{ results.location }}
+		<br>
+		
+
+	</div>	
+
+    				
+
+
+	</div><!-- /content -->
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="opiniones">
+
+	<div data-role="header">
+		<h1>{{ results.title }}</h1>
+		<a data-role="button" data-theme="a" data-direction="reverse" href="{{ path('home') }}" data-icon="back">Volver</a>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#info" data-transition="flip">Información</a></li>
+			<li><a href="#menu" data-transition="flip">Carta</a></li>
+			<li><a href="#opiniones" class="ui-btn-active">Opiniones</a></li>
+			<li><a href="#mapa" data-transition="flip">Mapa</a></li>
+			<li><a href="#">Favorito</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content" id="opiniones">	
+
+		<h2>Comentarios</h2>
+<div class="fb-comments" data-href="http://mallify.com/food/restaurant/{{ results.slug }}#opiniones" data-num-posts="10"></div>
+
+		
+
+	</div>	
+
+	</div><!-- /content -->
+	
+	
+</div><!-- /page one -->
+
+<div data-role="page" id="menu">
+
+	<div data-role="header">
+		<h1>{{ results.title }}</h1>
+		<a data-role="button" data-theme="a" data-direction="reverse" href="{{ path('home') }}" data-icon="back">Volver</a>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#info" data-transition="flip">Información</a></li>
+			<li><a href="#menu" class="ui-btn-active">Carta</a></li>
+			<li><a href="#opiniones" data-transition="flip">Opiniones</a></li>
+			<li><a href="#mapa" data-transition="flip">Mapa</a></li>
+			<li><a href="#">Favorito</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content" id="menu">	
+
+
+			<ul data-role="listview" data-split-theme="d">
+		
+		{% for category in results.categories %}
+
+			<li data-role="list-divider">{{ category.title }}</li>
+		
+			{% for product in category.products %}
+			<li><a href="#">{{ product.title }}<p style="margin: 5px; font-size: 14px;">€ {{ product.price }}</p></a></li>
+
+			{% endfor %}
+		
+		{% endfor %}
+			</ul>
+</div>	
+
+    				<div class="ui-block-b"><a data-role="button" data-theme="a" data-direction="reverse" href="{{ path('home') }}">Volver</a></div>
+
+
+	</div><!-- /content -->
+	
+	
+</div><!-- /page one -->
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="mapa">
+
+	<div data-role="header">
+		<h1>{{ results.title }}</h1>
+		<a data-role="button" data-theme="a" data-direction="reverse" href="{{ path('home') }}" data-icon="back">Volver</a>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#info">Información</a></li>
+			<li><a href="#menu">Carta</a></li>
+			<li><a href="#opiniones">Opiniones</a></li>
+			<li><a href="#mapa" class="ui-btn-active">Mapa</a></li>
+			<li><a href="#">Favorito</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content" id="mapa">	
+
+
+			<img src="http://maps.google.com/maps/api/staticmap?center={{ results.location|url_encode }}&zoom=14&size=512x512&maptype=roadmap&sensor=false&markers=color:red|label:A|{{ results.location|url_encode }}" width="100%">
+</div>	
+
+    				<div class="ui-block-b"><a data-role="button" data-theme="a" data-direction="reverse" href="{{ path('home') }}">Volver</a></div>
+
+
+	</div><!-- /content -->
+	
+	
+	
+</div><!-- /page one -->
+
+</body>
+</html>
